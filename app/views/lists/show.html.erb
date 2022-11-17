@@ -1,0 +1,22 @@
+<h1><%= @list.name %></h1>
+
+<div class="main-container">
+  <div class="card-container">
+    <% @movies.each do |movie| %>
+      <div class="movie-card">
+        <% mov_info = Movie.find(movie.movie_id) %>
+        <img src="https://image.tmdb.org/t/p/original/<%= mov_info.poster_url %>">
+        <div class="p-3">
+          <h2><%= mov_info.title %></h2>
+          <%= mov_info.rating %> ⭐<br>
+          <p><%= mov_info.overview %></p>
+          <blockquote class="blockquote"><i class="fa-solid fa-quote-left"></i> <%= movie.comment %></blockquote>
+          <%= link_to "Delete", bookmark_path(movie), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to "Add a movie", new_list_bookmark_path(@list) %>
+<%= link_to "Go back", lists_path %>
