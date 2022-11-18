@@ -1,5 +1,5 @@
 .movie-card {
-  width: 450px;
+  width: 320px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.05);
@@ -7,9 +7,8 @@
 
   img {
     width: 100%;
-    height: 240px;
+    // height: 400px;
     object-fit: cover;
-    object-position: 50% 20%;
   }
 
   p {

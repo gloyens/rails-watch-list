@@ -1,9 +1,14 @@
-<h1>New Bookmark</h1>
+<div class="main-container">
 
-<%= simple_form_for([@list, @bookmark]) do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
-  <%= f.submit "Create bookmark", class: "btn btn-primary" %>
-<% end %>
+  <div class="form-container">
+    <h1>New Movie</h1>
 
-<%= link_to "Go back", lists_path, class: "btn btn-outline-primary" %>
+    <%= simple_form_for([@list, @bookmark]) do |f| %>
+      <%= f.association :movie %>
+      <%= f.input :comment %>
+      <%= f.submit "Create bookmark", class: "button primary" %>
+    <% end %>
+
+  </div>
+  <%= link_to "Go back", lists_path, class: "button secondary" %>
+</div>
