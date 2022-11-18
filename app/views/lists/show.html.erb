@@ -1,4 +1,6 @@
-<h1><%= @list.name %></h1>
+<div class="header-container list">
+  <h1><%= @list.name %></h1>
+</div>
 
 <div class="main-container">
   <div class="card-container">
@@ -11,12 +13,12 @@
           <%= mov_info.rating %> ⭐<br>
           <p><%= mov_info.overview %></p>
           <blockquote class="blockquote"><i class="fa-solid fa-quote-left"></i> <%= movie.comment %></blockquote>
-          <%= link_to "Delete", bookmark_path(movie), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          <%= link_to "Delete", bookmark_path(movie), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: "button warning" %>
         </div>
       </div>
     <% end %>
   </div>
+  <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "button primary" %>
+  <%= link_to "Go back", lists_path, class: "button secondary" %>
+  <%= link_to "Delete this list", @list, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: "button warning" %>
 </div>
-
-<%= link_to "Add a movie", new_list_bookmark_path(@list) %>
-<%= link_to "Go back", lists_path %>

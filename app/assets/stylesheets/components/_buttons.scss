@@ -1,0 +1,36 @@
+.button {
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 6px 12px;
+  border-radius: 16px;
+  // background-color: rgba(0, 132, 255, 0.1);
+
+  &.primary {
+    color: rgb(0, 132, 255);
+    background-color: rgba(0, 132, 255, 0.1);
+  }
+
+  &.primary:hover {
+    color: rgb(0, 132, 255);
+    background-color: rgba(0, 132, 255, 0.15);
+  }
+
+  &.secondary {
+    color: rgb(0, 132, 255);
+  }
+
+  &.secondary:hover {
+    color: rgb(0, 132, 255);
+    background-color: rgba(0, 132, 255, 0.08);
+  }
+
+  &.warning {
+    color: rgb(255, 0, 50);
+    background-color: rgba(255, 0, 50, 0.1);
+  }
+
+  &.warning:hover {
+    color: rgb(255, 0, 50);
+    background-color: rgba(255, 0, 50, 0.15);
+  }
+}
